@@ -14,10 +14,10 @@ class HomepageView extends GetView<HomepageController> {
         controller: controller.scrollController,
         slivers: [
           SliverAppBar(
-            pinned: false,
+            pinned: true,
             snap: false,
             floating: false,
-            title: Text('Appbar'),
+            title: const Text('Appbar'),
             expandedHeight: 100,
             flexibleSpace: Container(
               height:200,
@@ -25,7 +25,7 @@ class HomepageView extends GetView<HomepageController> {
                 borderRadius: BorderRadius.circular(15),
                 color: Colors.blueAccent,
               ),
-              child: Icon(
+              child: const Icon(
                 Icons.man,
                 size: 90,
                 color: Colors.white,
@@ -48,7 +48,7 @@ class HomepageView extends GetView<HomepageController> {
                       Center(
                           child: Text(
                         '${index + 1}',
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 29, fontWeight: FontWeight.w500),
                       )),
                     ],
@@ -65,18 +65,18 @@ class HomepageView extends GetView<HomepageController> {
         children: [
           Container(
             decoration:
-                BoxDecoration(shape: BoxShape.circle, color: Colors.redAccent),
+                const BoxDecoration(shape: BoxShape.circle, color: Colors.redAccent),
             child: IconButton(
                 onPressed: () {
                   controller.scrollController.animateTo(
                       controller.scrollController.position.minScrollExtent,
-                      duration: Duration(
+                      duration: const Duration(
                         seconds: 4,
                       ),
                       curve: Curves.bounceIn
                   );
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.arrow_upward,
                   size: 30,
                   color: Colors.white,
@@ -84,17 +84,17 @@ class HomepageView extends GetView<HomepageController> {
           ),
           Container(
             decoration:
-                BoxDecoration(shape: BoxShape.circle, color: Colors.redAccent),
+                const BoxDecoration(shape: BoxShape.circle, color: Colors.redAccent),
             child: IconButton(
                 onPressed: () {
                   controller.scrollController.animateTo(
                       controller.scrollController.position.maxScrollExtent,
-                      duration: Duration(
+                      duration: const Duration(
                         seconds: 4,
                       ),
                       curve: Curves.bounceIn);
                 },
-                icon: Icon(
+                icon: const Icon(
                   Icons.arrow_downward,
                   size: 30,
                   color: Colors.white,
